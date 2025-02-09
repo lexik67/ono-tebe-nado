@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
   </head>
@@ -15,7 +15,7 @@
       <nav class="header-menu">
         <ul class="header-menu__list">
           <li class="header-menu__item header-menu__item_active">
-            <a href="#0" class="header-menu__link header-menu__link_active"
+            <a href="#0" class="header-menu__link link-active"
               >главная</a
             >
           </li>
@@ -27,15 +27,13 @@
           </li>
         </ul>
       </nav>
-      <div class="header-logo">
-        <a href="#0" class="header-logo__link">
-          <img
-            class="header-logo__image"
-            src="/images/logo-black.svg"
-            alt="логотип оно тебе надо"
-          />
-        </a>
-      </div>
+      <a class="header-logo__link">
+        <img
+          class="header-logo__image"
+          src="./images/logo-black.svg"
+          alt="логотип оно тебе надо"
+        />
+      </a>
       <address class="header__contacts">
         <a class="header__contacts-link" href="tel:+99995555555"
           >+9 999 555 5555</a
@@ -51,39 +49,41 @@
     <main class="content">
       <!-- 2 - оно тебе надо -->
       <section class="jambotron">
-        <div class="overlay"></div>
-        <img class="jambotron__image" src="./images/cover.jpg" alt="обложка" />
         <div class="jambotron-header">
           <h1 class="jambotron-header__title">
-            <span class="text-left normal-letter-spacing">
-              о<span class="large-letter-spacing">н</span
-              ><span class="clear-letter-spacing">о</span>
+            <span class="jambotron-header__word-first normal-letter-spacing">
+              о<span class="large-letter-spacing">н</span>
+              <span class="clear-letter-spacing">о</span>
             </span>
-            <span class="text-center normal-letter-spacing">
-              те<span class="large-letter-spacing">б</span
-              ><span class="clear-letter-spacing">e</span>
+            <span class="jambotron-header__word-second normal-letter-spacing">
+              те<span class="large-letter-spacing">б</span>
+              <span class="clear-letter-spacing">e</span>
             </span>
-            <span class="text-right large-letter-spacing">
-              н<span class="normal-letter-spacing">ад</span
-              ><span class="clear-letter-spacing">о</span>
+            <span class="jambotron-header__word-third text-right large-letter-spacing">
+              н<span class="normal-letter-spacing">ад</span>
+              <span class="clear-letter-spacing">о</span>
             </span>
           </h1>
         </div>
         <div class="jambotron-footer-motto">
           <p class="jambotron-footer-motto__paragraph">
-            Аукцион вещей, в которые никто не верил
+            <span class="">Аукцион</span>
+            <span class="">вещей,</span> 
+            <span class="">в</span>
+            <span class="">которые никто не верил</span>
           </p>
         </div>
         <div class="jambotron-footer-btn">
           <a href="#0" class="jambotron-btn__link">Сделать ставку</a>
         </div>
+        <div class="overlay"></div>
       </section>
       <!-- 3 - лоты -->
       <section class="lots">
         <h2 class="lots__header">Лоты</h2>
-        <div class="list-lots">
+        <ul class="list-lots">
           <!-- первая карточка -->
-          <article class="card">
+          <article class="card card-bg-1">
             <a class="card__title-link" href="#0">
               <h3 class="card__title-head">
                 Фильм режиссёра, который бросил киношколу
@@ -93,17 +93,10 @@
               Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
               ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
             </p>
-            <div class="card-overlay">
-              <img
-                class="card-overlay__image"
-                src="./images/card-lot-01.jpg"
-                alt="фон первой карточки"
-              />
-              <div class="image-filter"></div>
-            </div>
+            <div class="overlay"></div>
           </article>
           <!-- вторая карточка -->
-          <article class="card">
+          <article class="card card-bg-2">
             <a class="card__title-link" href="#0">
               <h3 class="card__title-head">
                 Книга, где описан один скучный день из жизни рекламного агента
@@ -116,17 +109,10 @@
               времён. И это всё накладывается на эпическую поэму Гомера. Сколько
               бы вы поставили на «Улисса» Джеймса Джойса?
             </p>
-            <div class="card-overlay">
-              <img
-                class="card-overlay__image"
-                src="./images/card-lot-02.jpg"
-                alt="фон второй карточки"
-              />
-              <div class="image-filter"></div>
-            </div>
+            <div class="overlay"></div>
           </article>
           <!-- третья карточка -->
-          <article class="card">
+          <article class="card card-bg-3">
             <a class="card__title-link" href="#0">
               <h3 class="card__title-head">
                 Картина, которую повторит даже 5-летний сын маминой подруги
@@ -138,16 +124,9 @@
               Сколько бы вы на такое поставили, если бы не знали, что это — одна
               из революционных работ Кандинского?
             </p>
-            <div class="card-overlay">
-              <img
-                class="card-overlay__image"
-                src="./images/card-lot-03.jpg"
-                alt="фон третьей карточки"
-              />
-              <div class="image-filter"></div>
-            </div>
+            <div class="overlay"></div>
           </article>
-        </div>
+        </ul>
         <a href="#0" class="list-lots__btn-more"> посмотреть больше </a>
       </section>
       <!-- 4 - об аукционе -->

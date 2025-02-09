@@ -15,6 +15,18 @@ body {
   text-align: right;
 }
 
+.link-active {
+  text-decoration: none;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+	background-color:rgba(0, 0, 0, .6);
+  z-index: -1;
+}
+
 /* 1 - шапка */
 
 .header {
@@ -27,14 +39,12 @@ body {
 .header-menu {
   grid-column-start: 1;
   grid-column-end: 7;
-  place-self: space-between;
   place-content: center;
 }
 
 .header-menu__list {
   font-weight: normal;
   font-size: 18px;
-  letter-spacing: 1%;
   list-style: circle;
   display: flex;
   align-items: center;
@@ -46,11 +56,7 @@ body {
   text-decoration: none;
 }
 
-.header-menu__link_active a {
-  text-decoration: none;
-}
-
-.header-logo {
+.header-logo__link {
   grid-column-start: 7;
   grid-column-end: 10;
   display: flex;
@@ -82,44 +88,54 @@ body {
   letter-spacing: 0;
 }
 
-.header__contacts-geo {
-  letter-spacing: 1%;
-}
-
 /* 2 - оно тебе надо */
 
 .jambotron {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: 175px 90px 25px 90px 45px 90px auto 90px;
   width: 100%;
-  height: 757px;
+  min-height: 757px;
   text-transform: uppercase;
   color: #fff;
-  z-index: 2;
+  z-index: -2;
   margin-bottom: 179px;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .jambotron-header {
-  grid-column: 1/13;
-  grid-row: 1/11;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  z-index: 2;
   margin-left: 50px;
   margin-right: 50px;
+  grid-column: 1/13; 
+  grid-row: 2/7;
 }
 
 .jambotron-header__title {
   width: 100%;
   font-size: 100px;
+  /* margin-top: 100px; */
+}
+
+.jambotron-header__word {
+  line-height: normal;
+}
+
+.jambotron-header__word-first {
   display: flex;
-  flex-direction: column;
-  padding-top: 40px;
-  column-gap: 10px;
+}
+
+.jambotron-header__word-second {
+  display: flex;
+  margin-left: 287px;
+}
+
+.jambotron-header__word-third {
+  margin-left: 287px;
+  display: flex;
+  place-content: end;
 }
 
 .clear-letter-spacing {
@@ -134,29 +150,10 @@ body {
   letter-spacing: 60px;
 }
 
-.overlay {
-  width: 100%;
-	background: #000;
-	opacity: 0.6;
-  grid-column: 1/13;
-  grid-row: 1/13;
-  z-index: 1;
-}
-
-.jambotron__image {
-  grid-column: 1/13;
-  grid-row: 1/13;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
 .jambotron-footer-motto {
   grid-column: 1/9;
-  grid-row: 11/12;
-  z-index: 2;
-  align-content: bottom;
-  align-content: end;
+  grid-row: 8/9;
+  align-content: start;
 }
 
 .jambotron-footer-motto__paragraph {
@@ -168,9 +165,9 @@ body {
 
 .jambotron-footer-btn {
   grid-column: 9/13;
-  grid-row: 11/12;
+  grid-row: 8/9;
   z-index: 2;
-  align-self: end;
+  align-self: start;
   padding-bottom: 5px;
   padding-left: 60px;
 }
@@ -181,7 +178,6 @@ body {
   padding: 12px 32px 11px 31px;
   font-size: 22px;
 }
-
 
 /* 3 - лоты */
 
@@ -218,6 +214,30 @@ body {
   padding-bottom: 48px;
 }
 
+.card-bg-1 {
+  background-image: url(../images/card-lot-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.card-bg-2 {
+  background-image: url(../images/card-lot-02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.card-bg-3 {
+  background-image: url(../images/card-lot-03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
 .card__title-link {
   padding-top: 51px;
   padding-left: 40px;
@@ -242,33 +262,10 @@ body {
   line-height: 120%;
 }
 
-.card-overlay {
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-}
-
-.card-overlay__image {
-  height: 100%;
-  position: relative;
-}
-
-.image-filter {
-  width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color:rgba(0, 0, 0, .6);
-}
-
 .list-lots__btn-more {
   font-size: 20px;
   margin-left: 40px;
 }
-
 
 /* 4 - об аукционе */
 
@@ -289,7 +286,6 @@ body {
   align-items: center;
   border-radius: 50%;
   background: #000;
-  overflow: hidden;
   margin-top: 32px;
   justify-self: center;
 }
@@ -317,7 +313,6 @@ body {
   line-height: 24px;
   margin-bottom: 24px;
   line-height: 24px;
-  letter-spacing: 1%;
   margin-right: 29px;
 }
 
