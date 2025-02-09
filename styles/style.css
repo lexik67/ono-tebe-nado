@@ -192,14 +192,16 @@ body {
   font-size: 40px;
   text-transform: uppercase;
   margin-left: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .list-lots {
   display: flex;
   column-gap: 25px;
+  row-gap: 25px;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  list-style: none;
 }
 
 .card {
@@ -238,18 +240,15 @@ body {
   z-index: -2;
 }
 
-.card__title-link {
-  padding-top: 51px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
 .card__title-head {
   font-size: 22px;
   font-weight: bold;
   line-height: 120%;
   text-transform: uppercase;
   text-decoration: underline;
+  padding-top: 51px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .card__text {
@@ -257,9 +256,7 @@ body {
   padding-right: 40px;
   font-size: 20px;
   line-height: 120%;
-  font-size: 20px;
   font-weight: normal;
-  line-height: 120%;
 }
 
 .list-lots__btn-more {
@@ -312,7 +309,6 @@ body {
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 24px;
-  line-height: 24px;
   margin-right: 29px;
 }
 
