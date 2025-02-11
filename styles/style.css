@@ -76,7 +76,7 @@ body {
 
 /* 2 - оно тебе надо */
 
-.jambotron {
+.cover {
   padding: 144px 0px 50px;
   width: 100%;
   min-height: 757px;
@@ -88,70 +88,62 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.jambotron-header {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.jambotron-header__title {
-  width: 100%;
+.cover-header__title {
   font-size: 100px;
+  line-height: 1.15;
   position: relative;
   z-index: 1;
+  letter-spacing: 30px;
+  margin-top: 23px;
+  margin-bottom: 134px;
 }
 
-.jambotron-header__word {
-  display: flex;
+.cover-header__word-aligned {
+  display: block;
   margin-top: 20px;
-  line-height: normal;
+  line-height: 1;
 }
 
-.jambotron-header__word-center {
-  margin-left: 287px;
-  margin-top: 10px;
+.cover-header__word-center {
+  text-align: center;
 }
 
-.jambotron-header__word-right {
-  place-content: end;
-  margin-top: 4px;
-  margin-left: 287px;
+.cover-header__word-right {
+  text-align: right;
+}
+
+.large-letter-spacing {
+  letter-spacing: 0.6em;
 }
 
 .clear-letter-spacing {
   letter-spacing: 0;
 }
 
-.normal-letter-spacing {
-  letter-spacing: 30px;
-}
-
-.large-letter-spacing {
-  letter-spacing: 60px;
-}
-
-.jambotron-footer {
-  margin-top: 127px;
+.cover-footer {
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   gap: 78px;
+  justify-content: flex-end;
 }
 
-.jambotron-footer__paragraph {
+.cover-footer__paragraph {
   font-size: 22px;
   line-height: 28px;
   word-spacing: 18px;
-  padding-left: 80px;
 }
 
-.jambotron-btn {
+.cover-btn {
   text-decoration: none;
   text-transform: uppercase;
   border: 1px solid #fff;
-  padding: 12px 34px 12px 34px;
+  padding: 12px 34px;
   font-size: 22px;
   font-weight: normal;
   background-color: transparent;
