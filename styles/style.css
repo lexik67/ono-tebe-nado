@@ -17,7 +17,6 @@ body {
   inset: 0;
   position: absolute;
 	background-color:rgba(0, 0, 0, .6);
-  z-index: -1;
 }
 
 /* 1 - шапка */
@@ -83,7 +82,6 @@ body {
   min-height: 757px;
   text-transform: uppercase;
   color: #fff;
-  z-index: -2;
   margin-bottom: 179px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
@@ -100,6 +98,8 @@ body {
 .jambotron-header__title {
   width: 100%;
   font-size: 100px;
+  position: relative;
+  z-index: 1;
 }
 
 .jambotron-header__word {
@@ -133,7 +133,8 @@ body {
 
 .jambotron-footer {
   margin-top: 127px;
-  z-index: 2;
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 78px;
@@ -182,6 +183,10 @@ body {
   list-style: none;
 }
 
+.card__title-link {
+  text-decoration: none;
+}
+
 .card {
   display: flex;
   flex-grow: 0;
@@ -192,6 +197,7 @@ body {
   color: #fff;
   justify-content: space-between;
   padding-bottom: 48px;
+  text-decoration: none;
 }
 
 .card-bg-1 {
@@ -199,7 +205,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -2;
 }
 
 .card-bg-2 {
@@ -207,7 +212,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -2;
 }
 
 .card-bg-3 {
@@ -215,7 +219,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -2;
 }
 
 .card__title-head {
@@ -227,6 +230,8 @@ body {
   padding-top: 51px;
   padding-left: 40px;
   padding-right: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .card__text {
@@ -235,6 +240,8 @@ body {
   font-size: 20px;
   line-height: 120%;
   font-weight: normal;
+  position: relative;
+  z-index: 1;
 }
 
 .list-lots__btn-more {
